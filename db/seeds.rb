@@ -8,6 +8,6 @@
 
 50.times do
   User.create({
-    profile_name: Faker::Name.profile_name,
+    profile_name: Faker::Name.name
     })
 end
