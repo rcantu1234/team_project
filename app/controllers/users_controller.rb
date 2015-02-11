@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @users = User.limit(20)
                  .offset(20 * params[:page].to_i)
                  .order(params.fetch(:sort, :id))
-    @users = User.order(:first_name).page params[:page]
+    @users = User.order(:profile_name).page params[:page]
   end
 
   # GET /users/1
