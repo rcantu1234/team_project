@@ -2,12 +2,13 @@
 
 <h1>Listing Users</h1>
 
+<%= link_to 'New User', new_user_path %>
+
 <table class='table table-striped'>
   <thead>
     <tr>
       <th>ID</th>
-      <th><%= link_to "Profile Name", users_path(sort: :profile_name) %></th>
-      <th>Profile name</th>
+      <th><%= link_to "Profile Name", users_path %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -36,24 +37,24 @@
     <% ((@current_page - 2)..(@current_page + 2)).each do |page_num| %>
       <% if page_num == @current_page %>
         <li class='active'>
-        <% elsif page_num < 0 %>
+          <% elsif page_num < 0 %>
         <li class="disabled">
-        <% else %>
+         <% else %>
         <li>
         <% end %>
 
           <% if page_num < 0 %>
-          <%= link_to('*', '#') %>
+           <%= link_to('*', '#') %>
           <% else %>
-      <%= link_to(page_num, users_path(page: page_num)) %>
+           <%= link_to(page_num, users_path(page: page_num)) %>
+          <% end %>
+        </li>
     <% end %>
-  </li>
-  <% end %>
 
     <li class="<%= 'disabled' if @users.length > 0 %>">
-    <%= link_to('Next >', (users_path(page: @current_page + 1) if @users.length > 0), :'aria-label' => 'Next')  %>
+     <%= link_to('Next >', (users_path(page: @current_page + 1) if @users.length > 0), :'aria-label' => 'Next')  %>
     </li>
 
-</ul>
+  </ul>
 </nav>
 
