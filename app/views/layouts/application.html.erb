@@ -12,6 +12,13 @@
     <div class='col-md-12'>
       <p style='color: green;'><%= notice %></p>
       <p style='color: red;'><%= alert %></p>
+
+      <h1 style="align: center;">WE NEED A NAME FOR THE APPLICATION</h1>
+
+      <nav>
+        <%= link_to 'HOME', users_path %> |
+        <%= link_to 'NEW USER', new_user_path %>
+      </nav>
       <%= yield %>
     </div>
   </div>
