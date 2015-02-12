@@ -14,8 +14,9 @@
     <% @images.each do |image| %>
       <tr>
         <td><%= image.caption %></td>
+        <td><%= image.gram %>
         <td><%= link_to 'Show', image %></td>
-        <td><%= link_to 'Edit', edit_user_image_path(image) %></td>
+        <td><%= link_to 'Edit', edit_user_image_path(current_user, @image) %></td>
         <td><%= link_to 'Destroy', image, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
