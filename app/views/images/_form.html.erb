@@ -1,6 +1,9 @@
-<%= simple_form_for(@image) do |f| %>
+<%= simple_form_for([current_user, @image]) do |f| %>
   <%= f.error_notification %>
 
+  <div class="form-inputs">
+    <%= f.input :gram %>
+  </div>
   <div class="form-inputs">
     <%= f.input :caption %>
   </div>
