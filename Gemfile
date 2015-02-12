@@ -44,13 +44,13 @@ group :development, :test do
 end
 
 
-gem 'kaminari'
-gem 'puma'
-gem 'rails_12factor'
-gem 'paperclip', '~> 4.2'
-gem 'aws-sdk'
-gem 'figaro'
-gem 'devise'
+  gem 'kaminari'
+  gem 'puma'
+  gem 'rails_12factor'
+  gem 'paperclip', '~> 4.2'
+  gem 'aws-sdk'
+  gem 'figaro'
+  gem 'devise'
 group :test, :development do
   gem 'faker'
   gem 'quiet_assets'
