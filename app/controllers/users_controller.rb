@@ -77,4 +77,5 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:profile_name)
     end
+
 end
