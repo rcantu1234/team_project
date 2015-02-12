@@ -16,8 +16,10 @@
       <h1>WE NEED A NAME FOR THE APPLICATION</h1>
 
       <nav>
-        <%= link_to 'HOME', users_path %> |
-        <%= link_to 'NEW USER', new_user_path %>
+        <%= link_to 'HOME', root_path %> |
+        <%= link_to 'NEW USER', new_user_registration_path(@user) %>|
+        <%= link_to 'SIGN-IN', new_user_session_path %>|
+        <%= link_to 'SIGN-OUT', destroy_user_session_path(@user), method: :delete %>
       </nav>
 
       <%= yield %>
