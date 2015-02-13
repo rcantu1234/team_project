@@ -1,7 +1,15 @@
     @import 'bootstrap-sprockets';
     @import 'bootstrap';
 
+.nav-format {
+  padding-top: 20px;
+  margin-right: 10%;
+  text-decoration: none;
+  display: inline;
+  float: left;
+}
 
-h1 {
-  background-color: blue;
+ul {
+  list-style-type: none;
+  display: inline;
 }
