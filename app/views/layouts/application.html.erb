@@ -13,10 +13,10 @@
       <p style='color: green;'><%= notice %></p>
       <p style='color: red;'><%= alert %></p>
 
-      <h1>WE NEED A NAME FOR THE APPLICATION</h1>
+      <h1>ROEL&BUCKeGRAM</h1>
 
       <nav>
-        <%= link_to 'HOME', root_path %> |
+        <%= link_to 'HOME', user_images_path(:user_id) %> |
         <%= link_to 'NEW USER', new_user_registration_path(@user) %>|
         <%= link_to 'SIGN-IN', new_user_session_path %>|
         <%= link_to 'SIGN-OUT', destroy_user_session_path(@user), method: :delete %>
