@@ -7,12 +7,12 @@ Rails.application.configure do
   config.cache_classes = false
 
   config.paperclip_defaults = {
-     :storage => :s3,
-     :s3_credentials => {
-     :bucket => "teamprojectgram",
-     :access_key_id => Figaro.env.aws_key,
-     :secret_access_key => Figaro.env.aws_secret
-     }
+    :storage => 's3',
+    :s3_credentials => {
+    :bucket => ENV['AWS_BUCKET'],
+    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    }
   }
 
   # Do not eager load code on boot.
