@@ -10,6 +10,17 @@ Rails.application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
 
+  config.paperclip_defaults = {
+    storage: :s3,
+    s3_credentials: {
+    :bucket => "teamprojectgram",
+    :access_key_id => Figaro.env.aws_key,
+    :secret_access_key => Figaro.env.aws_secret
+
+    }
+  }
+
+
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
